@@ -1,0 +1,58 @@
+<reinstatePolicyPeriod xmlns="http://guidewire.com/bc/ws/gw/webservice/policycenter/bc1000/BillingAPI">
+  <reinstatementInfo xmlns="http://guidewire.com/pc/integration/BillingAPI/entity">
+    <!-- PCPolicyPeriodInfo fields -->
+    <TermNumber>1</TermNumber>
+    <PolicyNumber>PC123456789</PolicyNumber>
+    <PCPolicyPublicID>PolicyPeriod-456789</PCPolicyPublicID>
+    <TermConfirmed>true</TermConfirmed>
+    <!-- BillingInstructionInfo fields -->
+    <Description>Reinstatement after lapse</Description>
+    <ChargeInfos>
+      <ChargeInfo>
+        <Amount>100.00</Amount>
+        <ChargePatternCode>REINSTATE_FEE</ChargePatternCode>
+        <ChargeGroup>Reinstatement</ChargeGroup>
+        <WrittenDate>2024-06-01T00:00:00</WrittenDate>
+        <BreakdownItemInfos>
+          <BreakdownItemInfo>
+            <Amount>60.00</Amount>
+            <Description>Penalty Portion</Description>
+            <Commissionable>true</Commissionable>
+            <Categories>
+              <BreakdownCategoryInfo>
+                <CriteriaCode>PENALTY</CriteriaCode>
+                <CriteriaName>Penalty</CriteriaName>
+                <CategoryIdentifier>PEN</CategoryIdentifier>
+                <CategoryName>Penalty Charges</CategoryName>
+              </BreakdownCategoryInfo>
+            </Categories>
+          </BreakdownItemInfo>
+          <BreakdownItemInfo>
+            <Amount>40.00</Amount>
+            <Description>Processing Fee</Description>
+            <Commissionable>false</Commissionable>
+            <Categories>
+              <BreakdownCategoryInfo>
+                <CriteriaCode>PROC</CriteriaCode>
+                <CriteriaName>Processing</CriteriaName>
+                <CategoryIdentifier>FEE</CategoryIdentifier>
+                <CategoryName>Processing Fees</CategoryName>
+              </BreakdownCategoryInfo>
+            </Categories>
+          </BreakdownItemInfo>
+        </BreakdownItemInfos>
+      </ChargeInfo>
+      <ChargeInfo>
+        <Amount>25.00</Amount>
+        <ChargePatternCode>SERVICE_FEE</ChargePatternCode>
+        <ChargeGroup>Service</ChargeGroup>
+        <WrittenDate>2024-06-01T00:00:00</WrittenDate>
+      </ChargeInfo>
+    </ChargeInfos>
+    <EffectiveDate>2024-06-01T00:00:00</EffectiveDate>
+    <DepositRequirement>500.00</DepositRequirement>
+    <OfferNumber>Offer-1234</OfferNumber>
+    <SpecialHandling>billimmediately</SpecialHandling>
+  </reinstatementInfo>
+  <transactionId>TXN-20240601-001</transactionId>
+</reinstatePolicyPeriod>
