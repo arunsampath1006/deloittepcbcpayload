@@ -1,0 +1,59 @@
+<rewritePolicyPeriod xmlns="http://guidewire.com/bc/ws/gw/webservice/policycenter/bc1000/BillingAPI">
+  <rewriteInfo xmlns="http://guidewire.com/pc/integration/BillingAPI/entity">
+    <!-- PCPolicyPeriodInfo fields -->
+    <TermNumber>2</TermNumber>
+    <PolicyNumber>PC654321987</PolicyNumber>
+    <PCPolicyPublicID>PolicyPeriod-654321</PCPolicyPublicID>
+    <TermConfirmed>true</TermConfirmed>
+    <!-- BillingInstructionInfo fields -->
+    <Description>Rewrite due to risk change</Description>
+    <ChargeInfos>
+      <ChargeInfo>
+        <Amount>150.00</Amount>
+        <ChargePatternCode>REWRITE_FEE</ChargePatternCode>
+        <ChargeGroup>Rewrite</ChargeGroup>
+        <WrittenDate>2024-07-01T00:00:00</WrittenDate>
+        <BreakdownItemInfos>
+          <BreakdownItemInfo>
+            <Amount>100.00</Amount>
+            <Description>Adjustment</Description>
+            <Commissionable>false</Commissionable>
+            <Categories>
+              <BreakdownCategoryInfo>
+                <CriteriaCode>ADJ</CriteriaCode>
+                <CriteriaName>Adjustment</CriteriaName>
+                <CategoryIdentifier>ADJ</CategoryIdentifier>
+                <CategoryName>Policy Adjustment</CategoryName>
+              </BreakdownCategoryInfo>
+            </Categories>
+          </BreakdownItemInfo>
+        </BreakdownItemInfos>
+      </ChargeInfo>
+    </ChargeInfos>
+    <EffectiveDate>2024-07-01T00:00:00</EffectiveDate>
+    <DepositRequirement>600.00</DepositRequirement>
+    <OfferNumber>Offer-5678</OfferNumber>
+    <SpecialHandling>billonnext</SpecialHandling>
+    <!-- PolicyChangeInfo fields -->
+    <JurisdictionCode>CA</JurisdictionCode>
+    <PeriodStart>2024-07-01T00:00:00</PeriodStart>
+    <PeriodEnd>2025-07-01T00:00:00</PeriodEnd>
+    <!-- IssuePolicyInfo fields -->
+    <AccountNumber>ACC54321</AccountNumber>
+    <PaymentPlanPublicId>PayPlan-9002</PaymentPlanPublicId>
+    <ModelDate>2024-07-01T00:00:00</ModelDate>
+    <AssignedRisk>false</AssignedRisk>
+    <UWCompanyCode>UWC100</UWCompanyCode>
+    <BillingMethodCode>INVOICE</BillingMethodCode>
+    <ProductCode>PROP</ProductCode>
+    <ProducerCodeOfRecordId>ProdCode-777</ProducerCodeOfRecordId>
+    <AltBillingAccountNumber>ALTACC-21</AltBillingAccountNumber>
+    <Currency>usd</Currency>
+    <HasScheduledFinalAudit>false</HasScheduledFinalAudit>
+    <InvoiceStreamId>InvStream-001</InvoiceStreamId>
+    <!-- RenewalInfo fields -->
+    <PriorTermNumber>1</PriorTermNumber>
+    <PriorPolicyNumber>PC654321987</PriorPolicyNumber>
+  </rewriteInfo>
+  <transactionId>TXN-20240701-001</transactionId>
+</rewritePolicyPeriod>
