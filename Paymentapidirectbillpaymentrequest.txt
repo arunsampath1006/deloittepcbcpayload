@@ -1,3 +1,14 @@
+
+?xml version="1.0"?>
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+  <soap12:Header>
+    <gwsoap:traceability_id xmlns:gwsoap="http://guidewire.com/ws/soapheaders">8e682146-b31b-4f83-8420-47c9164b8a7b</gwsoap:traceability_id>
+    <gwsoap:authentication xmlns:gwsoap="http://guidewire.com/ws/soapheaders">
+      <gwsoap:username>su</gwsoap:username>
+      <gwsoap:password>gw</gwsoap:password>
+    </gwsoap:authentication>
+    <gwsoap:locale xmlns:gwsoap="http://guidewire.com/ws/soapheaders">en_US</gwsoap:locale>
+  </soap12:Header>
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:pay="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentAPI"
                   xmlns:rec="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentReceiptRecord"
