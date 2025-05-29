@@ -1,41 +1,39 @@
-
-?xml version="1.0"?>
-<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+<?xml version="1.0"?>
+<soap12:Envelope xmlns:soap12="http://www.w3.org/2003/05/soap-envelope"
+                 xmlns:pay="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentAPI"
+                 xmlns:rec="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentReceiptRecord"
+                 xmlns:ins="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentInstrumentRecord"
+                 xmlns:gwsoap="http://guidewire.com/ws/soapheaders">
   <soap12:Header>
-    <gwsoap:traceability_id xmlns:gwsoap="http://guidewire.com/ws/soapheaders">8e682146-b31b-4f83-8420-47c9164b8a7b</gwsoap:traceability_id>
-    <gwsoap:authentication xmlns:gwsoap="http://guidewire.com/ws/soapheaders">
+    <gwsoap:traceability_id>8e682146-b31b-4f83-8420-47c9164b8a7b</gwsoap:traceability_id>
+    <gwsoap:authentication>
       <gwsoap:username>su</gwsoap:username>
       <gwsoap:password>gw</gwsoap:password>
     </gwsoap:authentication>
-    <gwsoap:locale xmlns:gwsoap="http://guidewire.com/ws/soapheaders">en_US</gwsoap:locale>
+    <gwsoap:locale>en_US</gwsoap:locale>
   </soap12:Header>
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
-                  xmlns:pay="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentAPI"
-                  xmlns:rec="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentReceiptRecord"
-                  xmlns:ins="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentInstrumentRecord">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <pay:makeDirectBillPayment>
-         <pay:directbillPaymentReceipt>
-            <rec:AccountID>12345</rec:AccountID>
-            <rec:AccountNumber>ACC-001</rec:AccountNumber>
-            <rec:Description>Direct Bill Payment</rec:Description>
-            <rec:MonetaryAmount>100.00</rec:MonetaryAmount>
-            <rec:PaymentDate>2025-05-29T10:00:00</rec:PaymentDate>
-            <rec:PaymentInstrumentRecord>
-               <ins:Detail>Bank Transfer</ins:Detail>
-               <ins:DisplayName>Bank A</ins:DisplayName>
-               <ins:OneTime>true</ins:OneTime>
-               <ins:PaymentMethod>ach</ins:PaymentMethod>
-               <ins:Token>abc123token</ins:Token>
-            </rec:PaymentInstrumentRecord>
-            <rec:PaymentReceiptType>DIRECTBILLMONEYDETAILS</rec:PaymentReceiptType>
-            <rec:PolicyNumber>POL-001</rec:PolicyNumber>
-            <rec:ProducerID>PROD-789</rec:ProducerID>
-            <rec:PublicID>rec-001</rec:PublicID>
-            <rec:ReceivedDate>2025-05-29T10:00:00</rec:ReceivedDate>
-            <rec:RefNumber>PAY-REF-001</rec:RefNumber>
-         </pay:directbillPaymentReceipt>
-      </pay:makeDirectBillPayment>
-   </soapenv:Body>
-</soapenv:Envelope>
+  <soap12:Body>
+    <pay:makeDirectBillPayment>
+      <pay:directbillPaymentReceipt>
+        <rec:AccountID>12345</rec:AccountID>
+        <rec:AccountNumber>ACC-001</rec:AccountNumber>
+        <rec:Description>Direct Bill Payment</rec:Description>
+        <rec:MonetaryAmount>100.00</rec:MonetaryAmount>
+        <rec:PaymentDate>2025-05-29T10:00:00</rec:PaymentDate>
+        <rec:PaymentInstrumentRecord>
+          <ins:Detail>Bank Transfer</ins:Detail>
+          <ins:DisplayName>Bank A</ins:DisplayName>
+          <ins:OneTime>true</ins:OneTime>
+          <ins:PaymentMethod>ach</ins:PaymentMethod>
+          <ins:Token>abc123token</ins:Token>
+        </rec:PaymentInstrumentRecord>
+        <rec:PaymentReceiptType>DIRECTBILLMONEYDETAILS</rec:PaymentReceiptType>
+        <rec:PolicyNumber>POL-001</rec:PolicyNumber>
+        <rec:ProducerID>PROD-789</rec:ProducerID>
+        <rec:PublicID>rec-001</rec:PublicID>
+        <rec:ReceivedDate>2025-05-29T10:00:00</rec:ReceivedDate>
+        <rec:RefNumber>PAY-REF-001</rec:RefNumber>
+      </pay:directbillPaymentReceipt>
+    </pay:makeDirectBillPayment>
+  </soap12:Body>
+</soap12:Envelope>
