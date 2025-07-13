@@ -1,0 +1,32 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
+                  xmlns:bc="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentAPI" 
+                  xmlns:rec="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentReceiptRecord"
+                  xmlns:dist="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/DistributionItemRecord"
+                  xmlns:pay="http://guidewire.com/bc/ws/gw/webservice/bc/bc1000/PaymentInstrumentRecord"
+                  xmlns:typ="http://guidewire.com/bc/typekey">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bc:makeAgencyBillPayment>
+         <agencyPaymentReceipt>
+            <rec:AccountID>123456789</rec:AccountID>
+            <rec:AccountNumber>ACC10001</rec:AccountNumber>
+            <rec:MonetaryAmount>5000.00</rec:MonetaryAmount>
+            <rec:ProducerID>PROD123</rec:ProducerID>
+            <rec:PaymentDate>2025-07-13T10:00:00</rec:PaymentDate>
+            <rec:PaymentInstrumentRecord>
+               <pay:PaymentMethod>check</pay:PaymentMethod>
+               <pay:Detail>Cheque No. 123456</pay:Detail>
+            </rec:PaymentInstrumentRecord>
+         </agencyPaymentReceipt>
+         <distributionRecords>
+            <Entry>
+               <dist:GrossAmount>5000.00</dist:GrossAmount>
+               <dist:CommissionAmount>500.00</dist:CommissionAmount>
+               <dist:Disposition>carryforward</dist:Disposition>
+               <dist:InvoiceItemID>INV123456</dist:InvoiceItemID>
+            </Entry>
+         </distributionRecords>
+         <attemptProducerWriteoff>false</attemptProducerWriteoff>
+      </bc:makeAgencyBillPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
